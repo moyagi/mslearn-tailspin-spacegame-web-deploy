@@ -115,12 +115,12 @@ stages:
   displayName: 'Deploy to the staging environment'
   dependsOn: Test
   jobs:
-  # - deployment: Deploy
-    # pool:
-    #   vmImage: 'ubuntu-18.04'
-    # environment: staging
-    # variables:
-    # - group: 'Release'
+  - deployment: Deploy
+    pool:
+      vmImage: 'ubuntu-18.04'
+    environment: staging
+    variables:
+    - group: 'Release'
     # strategy:
     #   runOnce:
     #     deploy:
